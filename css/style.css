@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 150px); /* 4 colunas para comportar mais blocos */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.color-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.color-button.flash {
+    opacity: 1;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8); /* Borda brilhosa ao piscar */
+}
+
+.hidden {
+    display: none;
+}
+
+#green {
+    background-color: rgb(15, 152, 15);
+    background-image: url('../images/vee2.png'); /* Imagem verde */
+}
+
+#red {
+    background-color: rgb(220, 3, 3);;
+    background-image: url('../images/sprout2.png'); /* Imagem vermelha */
+}
+
+#yellow {
+    background-color: rgb(243, 223, 6);;
+    background-image: url('../images/teagan2.png'); /* Imagem amarela */
+}
+
+#blue {
+    background-color: rgb(7, 90, 222);;
+    background-image: url('../images/tisha2.png'); /* Imagem azul */
+}
+
+#purple {
+    background-color: rgb(149, 7, 149);
+    background-image: url('../images/boxten2.png');
+}
+
+#orange {
+    background-color: rgb(251, 138, 0);
+    background-image: url('../images/shrimpo2.png');
+}
+
+#pink {
+    background-color: rgb(255, 111, 197);
+    background-image: url('../images/poppy2.png');
+}
+
+#black {
+    background-color: rgb(24, 21, 22);
+    background-image: url('../images/toodles2.png');
+}
+
+#SPECIAL {
+    background-color: rgb(255, 255, 255);
+    background-image: url('../images/DANDY.png');
+}
+
+#status {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#start-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 10px 0; /* Espaçamento interno */
+    z-index: 10; /* Garante que fique acima de outros elementos */
+}
+
+.rankinghud {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rankinghud h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.rankinghud ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.rankinghud li {
+    font-size: 1.2rem;
+    padding: 5px 0;
+}
